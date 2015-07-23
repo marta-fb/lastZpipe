@@ -1,13 +1,13 @@
 #!/bin/bash
 #Need to modify path, genomes and parameters!
 
-#$ -wd $HOME/lastZ_cattle
-#$ -o $HOME/lastZ_cattle/runPrep.$JOB_ID.out
+#$ -wd $HOME/lastZ
+#$ -o $HOME/lastZ/runPrep.$JOB_ID.out
 
 chainParams="-minScore=1000 -linearGap=medium" #loose for galGal2
 lastzParams="C=0 E=30 H=2000 K=3000 L=3000 O=400 M=50" #parameters from UCSC webpage for human-mouse alignments M=50 form cow-pig align in UCSC
-TNAME=bosTau6
-QNAME=giraffe10K
+TNAME=<sps_name>
+QNAME=<sps_name2>
 
 BASEDIR=$(pwd)
 LOGDIR=$(pwd)/logs
