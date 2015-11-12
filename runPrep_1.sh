@@ -68,7 +68,7 @@ module load apps/lastz apps/kent
 
 B=\$((\$SGE_TASK_ID-1))
 T_IDX=\$((\$B / ${QS} + 1))
-Q_IDX=\$((\$B % ${QS}))
+Q_IDX=\$((\$B % ${QS} + 1))
 
 T=\$(tail -n+\${T_IDX} target.list | head -n1)
 Q=\$(tail -n+\${Q_IDX} query.list | head -n1)
